@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "katex/dist/katex.min.css";
+
+:root {
+  /* MANDATORY per modern-web-guidance dark-mode: apply color-scheme on root */
+  color-scheme: dark;
+  --cv-surface: #111318;
+  --cv-surface-container-lowest: #0c0e13;
+  --cv-surface-container-low: #1a1b21;
+  --cv-surface-container: #1e1f25;
+  --cv-surface-container-high: #282a2f;
+  --cv-surface-container-highest: #33353a;
+  --cv-primary: #d0bcff;
+  --cv-primary-container: #a078ff;
+  --cv-on-primary-container: #340080;
+  --cv-secondary: #5de6ff;
+  --cv-tertiary: #4edea3;
+}
+
+[data-theme="carbon"] {
+  --cv-surface: #07080a;
+  --cv-surface-container-lowest: #040507;
+  --cv-surface-container-low: #0e1015;
+  --cv-surface-container: #14171f;
+  --cv-surface-container-high: #1d212b;
+  --cv-surface-container-highest: #272c38;
+}
+
+[data-theme="slate"] {
+  --cv-surface: #151922;
+  --cv-surface-container-lowest: #0f1219;
+  --cv-surface-container-low: #1c212c;
+  --cv-surface-container: #222836;
+  --cv-surface-container-high: #2c3344;
+  --cv-surface-container-highest: #374054;
+}
+
+[data-accent="cyan"] {
+  --cv-primary: #5de6ff;
+  --cv-primary-container: #00cbe6;
+  --cv-on-primary-container: #00363e;
+}
+
+[data-accent="emerald"] {
+  --cv-primary: #4edea3;
+  --cv-primary-container: #00a572;
+  --cv-on-primary-container: #00311f;
+}
+
+[data-accent="amber"] {
+  --cv-primary: #fcd34d;
+  --cv-primary-container: #f59e0b;
+  --cv-on-primary-container: #3b1f00;
+}
+
+[data-accent="rose"] {
+  --cv-primary: #fda4af;
+  --cv-primary-container: #f43f5e;
+  --cv-on-primary-container: #3f0010;
+}
+
+html,
+body {
+  background-color: var(--cv-surface, #111318);
+  color: #e2e2e9;
+  margin: 0;
+  padding: 0;
+}
+
+/* MANDATORY per modern-web-guidance prevent-page-scroll-under-modal-dialog */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(12, 14, 19, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111318;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282a2f;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33353a;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}

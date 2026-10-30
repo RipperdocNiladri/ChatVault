@@ -65,6 +65,10 @@ npm run test:e2e
 
 ---
 
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
 ## Project Documentation
 
 - [`docs/architecture.md`](./docs/architecture.md) — System architecture, IndexedDB schema, search indexing, and data flow.

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "ChatVault — Your AI Conversations. Beautifully Organized. Local-first AI knowledge organizer.",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
